@@ -10,7 +10,8 @@
 # Define your function and call it below.
 
 def calculate_area_triangle(base, height):
-    return base * height / 2
+    area = base * height / 2
+    return area
 
 print('Exercise 1:', calculate_area_triangle(10, 5))
 
@@ -26,7 +27,8 @@ print('Exercise 1:', calculate_area_triangle(10, 5))
 # Define your function and call it to see the result.
 
 def simple_interest(principal, rate, time):
-    return (principal * rate * time) / 100
+    interest = (principal * rate * time) / 100
+    return interest
 
 
 print('Exercise 2:', simple_interest(1000, 5, 2))
@@ -43,7 +45,34 @@ print('Exercise 2:', simple_interest(1000, 5, 2))
 # Define your function and call it to display the discounted price.
 
 def apply_discount(price, discount):
-    return price * ((100-discount)/100)
-
+    discounted_price = price * ((100-discount)/100)
+    return discounted_price
 
 print('Exercise 3:', apply_discount(100, 25))
+
+# Exercise 4: Convert Temperature
+#
+# Write a function called `convert_temperature` that takes a
+# temperature and a unit ('C' for Celsius, 'F' for Fahrenheit)
+# and converts the temperature to the other unit.
+# The formula for converting Celsius to Fahrenheit is (Celsius * 9/5) + 32.
+# The formula for converting Fahrenheit to Celsius is (Fahrenheit - 32) * 5/9.
+#
+# Examples:
+# convert_temperature(0, 'C') should return 32.0.
+# convert_temperature(32, 'F') should return 0.0.
+#
+# Define the function and then call it below.
+
+def convert_temperature(temp, unit):
+    if unit.upper() == 'C':
+        return (temp * 9/5) + 32
+    elif unit.upper() == 'F':
+        return (temp - 32) * 5/9
+    else:
+        return "Invalid unit. Use 'C' or 'F'."
+
+
+print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
+print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
+
